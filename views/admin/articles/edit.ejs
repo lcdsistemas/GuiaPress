@@ -1,5 +1,5 @@
-<%- include ../../partials/header.ejs %>
-<%- include ../../partials/navbar.ejs %>
+<%- include ('../../partials/header.ejs'); %>
+<%- include ('../../partials/navbar.ejs'); %>
 
 <div class="container">
     <hr>
@@ -35,7 +35,7 @@
 
 
 
-<%- include ../../partials/footer.ejs %>
+<%- include ('../../partials/footer.ejs'); %>
 
 <script src="/tinymce/tinymce.min.js"></script>
 <script>
@@ -45,8 +45,21 @@
         selector: "#article",
         activeEditor: true,
         plugins: [
-            'advlist autolink link image lists print preview hr searchreplace wordcount fullscreen insertdatetime media save table paste emoticons'
-        ],
+                    'advlist',
+                    'autolink',
+                    'link',
+                    'image',
+                    'lists',
+                    'preview',
+                    'searchreplace',
+                    'wordcount',
+                    'fullscreen',
+                    'insertdatetime',
+                    'media',
+                    'save',
+                    'table',
+                    'emoticons',
+                ],
         init_instance_callback: () => {
             tinymce.get("article").setContent($("#content").html())
         }

@@ -15,7 +15,7 @@ const User = require("./users/User");
 // View engine
 app.set('view engine','ejs');
 
-// Sessions
+// Sessions -maxAge: 30000000  milisegundos - 30 segundos
 
 app.use(session({
     secret: "qualquercoisa", cookie: { maxAge: 30000000 }
