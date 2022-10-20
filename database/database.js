@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 
-const connection = new Sequelize('banco','lcd','LCd358',{
-    host: 'ftp.lcdsistemas.com.br',  //localhost
+const connection = new Sequelize('GUIAPRESS','root','',{
+    host: 'localhost',  //localhost
     dialect: 'mssql',
     logging: false,
     timezone: "-03:00" // gravar o horario de criação e update com base na time_zone(google)
