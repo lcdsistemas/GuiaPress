@@ -19,7 +19,7 @@ const Article = connection.define('articles',{
         allowNull: false
     }
 })
-Article.sync({force: true});
+Article.sync({force: false});
 
 
 
